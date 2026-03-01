@@ -261,3 +261,10 @@ Main Agent: "Based on the tech-lead's routing, I'll now coordinate the implement
 - FOLLOW the agent routing map exactly - do not improvise
 - USE deep reasoning when coordinating the recommended agents
 - TRUST the tech-lead's expertise in agent selection
+
+## Common Mistakes
+
+- Bypassing tech-lead-orchestrator and selecting agents directly — results in wrong framework-specific agents (e.g., rails agent for a Django project).
+- Substituting generic/universal agents when tech-lead specified a framework-specific one — degrades output quality.
+- Attempting direct agent-to-agent invocation — agents only return structured handoff info; the main agent must parse and re-invoke.
+- Using agents outside the "Available Agents" list returned by tech-lead — framework-specific agents only exist if tech-lead explicitly lists them.
